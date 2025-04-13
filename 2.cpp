@@ -2,7 +2,10 @@
 using namespace std;
 
 int main(){
-    for(int i = 0; i < 20; i++){
-	cout << "This is very good!\n";
+    int num;
+    cout << "Tell me, how many times should I say sorry!? ";
+    cin >> num;
+    for(int i = 1; i <= num; i++){
+	cout << "Sorry\n";
     }
 }
