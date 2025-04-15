@@ -12,5 +12,6 @@ int main(){
     add(&num1, &num2, &num3);
 
     cout << num3;
+    return 0;
 }
 

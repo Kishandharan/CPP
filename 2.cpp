@@ -6,6 +6,8 @@ int main(){
     cout << "Tell me, how many times should I say sorry!? ";
     cin >> num;
     for(int i = 1; i <= num; i++){
-	cout << "Sorry\n";
+	    cout << "Sorry\n";
     }
+
+    return 0;
 }
