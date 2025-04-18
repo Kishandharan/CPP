@@ -7,23 +7,23 @@ namespace vehicle{
         MEDIUM = 15,
         FAST = 20,
         XFAST = 25
-    }
+    };
 
     enum VehicleClass{
-        LORY,
+        LORRY,
         TRUCK,
         CAR,
         BIKE
-    }
+    };
 
 
     class MovingVehicle{
         public:
-            enum VehicleSpeed vspeed;
-            enum VehicleClass vclass;
+            VehicleSpeed vspeed;
+            VehicleClass vclass;
             double heading_dir;
 
-            MovingVehicle(enum VehicleSpeed vspeed, enum VehicleClass vclass, heading_dir){
+            MovingVehicle(VehicleSpeed vspeed, VehicleClass vclass, double heading_dir){
                 this->vspeed = vspeed;
                 this->vclass = vclass;
                 this->heading_dir = heading_dir;
@@ -39,17 +39,17 @@ namespace vehicle{
             void turn(double new_heading_dir){
                 this->heading_dir = new_heading_dir;
             }
-    }
+    };
 }
 int main(){
-    vehicle::VehicleSpeed vspeed = XFAST;
-    vehicle::VehicleClass vclass = TRUCK;
+    vehicle::VehicleSpeed vspeed = vehicle::XFAST;
+    vehicle::VehicleClass vclass = vehicle::TRUCK;
     vehicle::MovingVehicle moving_vehicle(vspeed, vclass, 50.8);
 
-    cout << "Before:"
+    cout << "Before:" << endl;
     moving_vehicle.displayDetails();
     moving_vehicle.turn(80.344);
-    cout << "After:"
+    cout << "After:" << endl;
     moving_vehicle.displayDetails();
 
 }
