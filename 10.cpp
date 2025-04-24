@@ -1,21 +1,25 @@
+#include <string>
 #include <iostream>
-#include <mutex>
-#include <thread>
 using namespace std;
 
-mutex mtx;
-
-void func(){
-    mtx.lock();
-    cout << "this is good!";
-    cout << "\n";
-    mtx.unlock();
-}
-
 int main(){
-    thread t1(func);    
-    thread t2(func);
-
-    t1.join();
-    t2.join();
+    long tstart;
+    long tend;
+    long nstart;
+    long nend;
+    cout << "T-start: ";
+    cin >> tstart;
+    cout << "T-end: ";
+    cin >> tend;
+    cout << "N-start: ";
+    cin >> nstart;
+    cout << "N-end: ";
+    cin >> nend;
+    cout << "\n";
+    for(int i = tstart; i<=tend; i++){             //Table loop
+       for(int j = nstart; j<=nend; j++){          //Number loop
+           cout << to_string(j) << "*" << to_string(i) << "=" << to_string(i*j) << "\n";
+       }
+       cout << "\n";
+    }
 }
