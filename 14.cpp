@@ -17,9 +17,29 @@ void savetable(deque<string>* pDest, int tabn, int start, int end){
 }
 
 int main(){
-    thread t1(savetable, &table1, 1, 1, 10);
-    thread t2(savetable, &table2, 2, 1, 10);
-    thread t3(savetable, &table3, 3, 1, 10);
+    int tabn1;
+    int tabn2;
+    int tabn3;
+    int start;
+    int end;
+    cout << "Table1: ";
+    cin >> tabn1;
+
+    cout << "Table2: ";
+    cin >> tabn2;
+    
+    cout << "Table3: ";
+    cin >> tabn3;
+
+    cout << "Start: ";
+    cin >> start;
+
+    cout << "End: ";
+    cin >> end;
+
+    thread t1(savetable, &table1, tabn1, start, end);
+    thread t2(savetable, &table2, tabn2, start, end);
+    thread t3(savetable, &table3, tabn3, start, end);
     t1.join();
     t2.join();
     t3.join();
