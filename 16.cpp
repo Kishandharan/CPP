@@ -11,10 +11,10 @@ int main(){
     deque<string> words;
     string line;
     while(getline(in, line)) {
-        words.push_back(line);        
+       words.push_back(line);        
     }
-    for(string item : words) {
-        cout << item << endl;        
+    for(int i = 0; i < 21; i++) {
+        cout << words.at(i) << endl;        
     }
     return 0;
 }
