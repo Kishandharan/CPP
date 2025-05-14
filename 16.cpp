@@ -16,5 +16,9 @@ int main(){
     for(int i = 0; i < 21; i++) {
         cout << words.at(i) << endl;        
     }
+    for(int i = 1; i < 10; i++) {
+       cout << "twenty " << words.at(i) << endl;        
+    }
     return 0;
 }
+
