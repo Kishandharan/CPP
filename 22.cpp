@@ -5,8 +5,8 @@ using namespace std;
 
 deque<string> split(string str, string delim){
     deque<string> splits;
-    for(char chr: str){
-        string temp;
+    string temp;
+    for(string chr: str){
         if(chr != delim){
             temp += chr;
         }else{
